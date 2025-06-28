@@ -1,5 +1,6 @@
 #include "game.h"
 #include <random>
+#include <time.h>
 
 Game::Game()
 {
@@ -26,6 +27,7 @@ Game::~Game()
 
 Block Game::GetRandomBlock()
 {
+    srand(time(0));
     if (blocks.empty())
     {
         blocks = GetAllBlocks();
